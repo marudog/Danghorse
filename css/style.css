@@ -1,0 +1,196 @@
+body {
+	font-family: sans-serif;
+	text-align: center;
+	padding: 0px;
+	background-color: #f0f0f0;
+  }
+  
+  .track-container {
+	margin-top: 20px;
+	width: 100%;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  .track {
+	position: relative;
+	height: 60px;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	margin: 10px 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	padding-left: 40px; /* 이름 영역 확보 */
+  }
+  
+  /* 레인 번호 (왼쪽 고정) */
+  .lane-label {
+	width: 30px;
+	text-align: right;
+	padding-right: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	flex-shrink: 0;
+	color: #333;
+  }
+  
+  /* 결승선 표시 (우측 절대 위치) */
+  .track::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 4px;
+	height: 100%;
+	background: red;
+  }
+  
+  /* 말 이미지 위치 */
+  .horse {
+	position: relative; /* 이름과 겹치지 않도록 상대 위치 */
+	left: 0; /* 이름 영역 이후부터 시작 */
+	height: 60px;
+  }
+  
+  .horse img {
+	height: 100%;
+	object-fit: contain;
+  }
+  
+  #winner {
+	position: fixed;
+	top: 200px; /* 화면 상단에서 10px 떨어짐 */
+	left: 50%;
+	transform: translateX(-50%); /* 가운데 정렬 */
+	background-color: #fff; /* 배경색 추가 */
+	padding: 10px 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	font-size: 50px;
+	font-weight: bold;
+	z-index: 1000; /* 다른 요소 위에 표시 */
+	display: none; /* 기본적으로 숨김 */
+  }
+  
+  #startBtn {
+	position: fixed; /* 화면에 고정 */
+	top: 50%; /* 화면의 세로 중앙 */
+	left: 50%; /* 화면의 가로 중앙 */
+	transform: translate(-50%, -50%); /* 정확히 중앙 정렬 */
+	font-size: 24px; /* 글자 크기 */
+	padding: 20px 40px; /* 버튼 크기 */
+	background-color: #4CAF50; /* 버튼 배경색 */
+	color: white; /* 글자 색 */
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s ease;
+	z-index: 1000; /* 다른 요소 위에 표시 */
+  }
+  
+  #startBtn:hover {
+	background-color: #45a049; /* 호버 시 색상 변경 */
+  }
+
+  #bettingContainer {
+	margin: 20px auto;
+	text-align: center;
+  }
+  
+  #bettingContainer label {
+	margin-right: 10px;
+  }
+  
+  #bettingContainer select,
+  #bettingContainer input {
+	margin-right: 10px;
+	padding: 5px;
+	font-size: 16px;
+  }
+  
+  #placeBetBtn {
+	padding: 5px 15px;
+	font-size: 16px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  #placeBetBtn:hover {
+	background-color: #45a049;
+  }
+
+  #horseCountContainer {
+	margin: 20px auto;
+	text-align: center;
+  }
+  
+  #horseCountContainer label {
+	margin-right: 10px;
+  }
+  
+  #horseCount {
+	padding: 5px;
+	font-size: 16px;
+	width: 60px;
+  }
+  
+  #setHorseCountBtn {
+	padding: 5px 15px;
+	font-size: 16px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  #setHorseCountBtn:hover {
+	background-color: #45a049;
+  }
+
+  #horseNameContainer {
+	margin: 20px auto;
+	text-align: center;
+  }
+  
+  #horseNameContainer label {
+	margin-right: 10px;
+  }
+  
+  #horseNames {
+	padding: 5px;
+	font-size: 16px;
+	width: 300px;
+  }
+  
+  #setHorseNamesBtn {
+	padding: 5px 15px;
+	font-size: 16px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  #setHorseNamesBtn:hover {
+	background-color: #45a049;
+  }
+
+  .name-label {
+	position: absolute; /* 트랙의 왼쪽에 고정 */
+	left: 10px; /* 트랙의 왼쪽에서 10px 떨어짐 */
+	top: 50%; /* 세로 중앙 정렬 */
+	transform: translateY(-50%); /* 정확히 중앙 정렬 */
+	width: 80px; /* 이름 표시 영역 너비 (기존 130px에서 줄임) */
+	text-align: left; /* 왼쪽 정렬 */
+	font-weight: bold;
+	font-size: 16px; /* 글자 크기 약간 줄임 */
+	color: #333;
+  }

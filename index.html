@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>댕마 게임</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>🏇 댕마 게임 🏇</h1>
+  <!-- <div id="bettingContainer">
+	<label for="horseSelect">베팅할 말 번호:</label>
+	<select id="horseSelect">
+	  <option value="1">1번 말</option>
+	  <option value="2">2번 말</option>
+	  <option value="3">3번 말</option>
+	  <option value="4">4번 말</option>
+	  <option value="5">5번 말</option>
+	  <option value="6">6번 말</option>
+	  <option value="7">7번 말</option>
+	  <option value="8">8번 말</option>
+	  <option value="9">9번 말</option>
+	  <option value="10">10번 말</option>
+	</select>
+	<label for="betAmount">베팅 금액:</label>
+	<input type="number" id="betAmount" min="1" placeholder="금액 입력" />
+	<button id="placeBetBtn">베팅하기</button>
+  </div> -->
+  <div id="horseNameContainer">
+	<label for="horseNames">이름 설정 (쉼표로 구분):</label>
+	<input type="text" id="horseNames" placeholder="예: 댕마1, 댕마2, 댕마3" />
+	<button id="setHorseNamesBtn">이름 설정</button>
+  </div>
+  <div id="horseCountContainer">
+	<label for="horseCount">수 설정:</label>
+	<input type="number" id="horseCount" min="1" max="20" value="10" />
+	<button id="setHorseCountBtn">설정</button>
+  </div>
+  <div id="trackContainer" class="track-container"></div>
+  <button id="startBtn">Start Race</button>
+  <div id="winner"></div>
+  <!-- <script src="js/betting.js"></script> -->
+  <script src="js/script.js"></script>
+</body>
+</html>

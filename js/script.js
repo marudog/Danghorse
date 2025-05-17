@@ -14,8 +14,8 @@ document.getElementById("setHorseCountBtn").addEventListener("click", () => {
 	const horseCountInput = document.getElementById("horseCount");
 	const newHorseCount = parseInt(horseCountInput.value);
 
-	if (isNaN(newHorseCount) || newHorseCount < 1 || newHorseCount > 20) {
-	  alert("1에서 20 사이의 유효한 숫자를 입력하세요.");
+	if (isNaN(newHorseCount) || newHorseCount < 1 || newHorseCount > 10) {
+	  alert("1에서 10 사이의 유효한 숫자를 입력하세요.");
 	  return;
 	}
 
